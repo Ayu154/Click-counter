@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mouse Click Counter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      position: relative;
+    }
+    #counter {
+      font-size: 48px;
+      color: #4CAF50;
+    }
+    #creator {
+      position: fixed;
+      bottom: 10px;
+      right: 20px;
+      font-size: 16px;
+      color: #555;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="creator">Creator: Lohani</div>
+
+  <h1>Mouse Click Counter</h1>
+  <p>Total Clicks:</p>
+  <div id="counter">0</div>
+
+  <script>
+    let count = 0;
+    const counterElement = document.getElementById("counter");
+
+    document.addEventListener("click", () => {
+      count++;
+      counterElement.textContent = count;
+    });
+  </script>
+
+</body>
+</html>
